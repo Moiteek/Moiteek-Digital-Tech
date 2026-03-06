@@ -1,6 +1,5 @@
 # Mohammed Mamman - Cinematic Portfolio
 
-🚀 **Awwwards-Level Portfolio** | $20,000+ Professional Design
 
 ## 🌟 Features
 
