@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Mamman - Full Stack Developer | Moiteek Digital Tech</title>
+    <meta name="description" content="Transforming ideas into exceptional digital experiences. Elite full-stack developer specializing in modern web applications and AI-powered solutions.">
+    <meta name="keywords" content="full stack developer, web development, react, node.js, AI, 3D, portfolio, moiteek">
+    <meta name="author" content="Mohammed Mohammed Mamman">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mohammed Mamman - Full Stack Developer">
+    <meta property="og:description" content="Transforming ideas into exceptional digital experiences">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/dp.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Theme -->
+    <script>
+        // Theme detection
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body data-theme="dark">
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-text">Moiteek</div>
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+    
+    <!-- Advanced Cursor System -->
+    <div id="cursor" class="custom-cursor">
+        <div class="cursor-inner"></div>
+        <div class="cursor-outer"></div>
+        <div class="cursor-light"></div>
+    </div>
+    
+    <!-- Mouse Lighting Effect -->
+    <div id="mouse-light" class="mouse-light"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <div class="brand-logo">
+                    <span class="brand-text">Moiteek</span>
+                    <div class="brand-dot"></div>
+                </div>
+            </div>
+            
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="navbar-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section with 3D Scene -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <!-- 3D Scene Container -->
+            <div id="three-scene" class="three-scene"></div>
+            
+            <!-- Liquid Gradient Background -->
+            <div class="liquid-gradient"></div>
+            
+            <!-- Animated Grid Background -->
+            <div class="grid-background"></div>
+            
+            <!-- Animated Code Background -->
+            <div class="code-background" id="code-background"></div>
+            
+            <!-- Floating Particles -->
+            <div class="particle-container" id="particles"></div>
+            
+            <!-- Floating 3D Shapes -->
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+                    <div class="badge-dot"></div>
+                    <span>🔥 Available for Projects</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Mohammed Mohammed Mamman</span>
+                    <span class="title-role">
+                        <span class="role-text">Full Stack Developer</span>
+                        <span class="role-cursor">|</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    Transforming ideas into exceptional digital experiences and 
+                    <span class="highlight">scalable web applications</span> with 
+                    <span class="highlight">AI-powered solutions</span>.
+                </p>
+                
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Happy Users</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#contact" class="hero-btn primary magnetic-btn">
+                        <span class="btn-content">
+                            <span class="btn-text">Let's Build Together</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    
+                    <a href="#projects" class="hero-btn secondary magnetic-btn">
+                        <span class="btn-content">
+                            <span class="btn-text">View My Work</span>
+                            <i class="fas fa-briefcase"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="assets/mohammed Mohammed mamman.pdf cv.pdf" download class="hero-btn outline magnetic-btn">
+                        <span class="btn-content">
+                            <span class="btn-text">Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="developer-illustration">
+                    <div class="code-container">
+                        <div class="code-lines">
+                            <div class="code-line"><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {</div>
+                            <div class="code-line">  <span class="code-property">name</span>: <span class="code-string">"Mohammed Mamman"</span>,</div>
+                            <div class="code-line">  <span class="code-property">skills</span>: [<span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>, <span class="code-string">"MongoDB"</span>],</div>
+                            <div class="code-line">  <span class="code-property">passion</span>: <span class="code-string">"Building amazing things"</span></div>
+                            <div class="code-line">};</div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-tech">
+                        <div class="tech-float tech-1">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-float tech-2">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-float tech-3">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-float tech-4">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-connections">
+                    <a href="https://github.com/Moiteek" class="social-link" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mohammed-mohammed-mamman" class="social-link" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/RealMoiteek" class="social-link" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://medium.com/@moiteek" class="social-link" target="_blank" aria-label="Medium">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll</div>
+            <div class="scroll-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-tip"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies I've mastered and tools I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card ai-panel" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li>React.js / Next.js</li>
+                        <li>TypeScript / JavaScript ES6+</li>
+                        <li>HTML5 & CSS3 / TailwindCSS</li>
+                        <li>Responsive Design & Mobile-First</li>
+                        <li>State Management (Redux, Zustand)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card ai-panel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <ul class="skill-list">
+                        <li>Node.js / Express.js</li>
+                        <li>Python / Django / Flask</li>
+                        <li>RESTful APIs & GraphQL</li>
+                        <li>Authentication & Security</li>
+                        <li>Microservices Architecture</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card ai-panel" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database & Storage</h3>
+                    <ul class="skill-list">
+                        <li>MongoDB / Mongoose</li>
+                        <li>PostgreSQL / MySQL</li>
+                        <li>Redis (Caching)</li>
+                        <li>Firebase / Supabase</li>
+                        <li>Database Design & Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card ai-panel" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design & UI/UX</h3>
+                    <ul class="skill-list">
+                        <li>Figma / Adobe XD</li>
+                        <li>Modern UI/UX Principles</li>
+                        <li>Animation & Micro-interactions</li>
+                        <li>Component-Based Design</li>
+                        <li>Design Systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="skills-chart-container" data-aos="fade-up" data-aos-delay="500">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Innovative solutions that make a difference</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Potiskum Connect -->
+                <div class="project-card premium-3d" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-visual">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/Potiskum connect.png" alt="Potiskum Connect" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Moiteek/Potiskum-Connect" class="action-btn primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="action-btn secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-category">
+                            <span class="category-badge">Community Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Potiskum Connect</h3>
+                        <p class="project-description">
+                            Comprehensive community services platform connecting locals with service providers, featuring marketplace functionality and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-users"></i>
+                                <span>500+ Users</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-briefcase"></i>
+                                <span>15+ Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Digital Tech Academy -->
+                <div class="project-card premium-3d" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-visual">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/Digital tech.png" alt="Digital Tech Academy" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Moiteek/Moiteek-Digital-Tech-Academy" class="action-btn primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="action-btn secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-category">
+                            <span class="category-badge">LMS Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Digital Tech Academy</h3>
+                        <p class="project-description">
+                            Professional Learning Management System for tech education with course management, student tracking, and certificate generation.
+                        </p>
+                        <div class="project-tech">
+                            <div class="tech-item">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>200+ Students</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-book"></i>
+                                <span>50+ Courses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- WeatherSphere -->
+                <div class="project-card premium-3d" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-visual">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/weather sphere.png" alt="WeatherSphere" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Moiteek/WeatherSphere" class="action-btn primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="action-btn secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-category">
+                            <span class="category-badge">Weather App</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">WeatherSphere</h3>
+                        <p class="project-description">
+                            Real-time weather application with accurate forecasts, location-based services, interactive maps, and beautiful data visualizations.
+                        </p>
+                        <div class="project-tech">
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Weather API</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Charts.js</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-globe"></i>
+                                <span>Global Coverage</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>Real-time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quran Remembrance -->
+                <div class="project-card premium-3d" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-visual">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/Quran.png" alt="Quran Remembrance" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Moiteek/Quran-Remembrance" class="action-btn primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="action-btn secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-category">
+                            <span class="category-badge">Islamic App</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quran Remembrance</h3>
+                        <p class="project-description">
+                            Islamic companion app featuring Quran recitation, prayer times, Qibla direction, Islamic calendar, and spiritual reminders.
+                        </p>
+                        <div class="project-tech">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-moon"></i>
+                                <span>Prayer Times</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-compass"></i>
+                                <span>Qibla Finder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Calculator -->
+                <div class="project-card premium-3d" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-visual">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/calculator.png" alt="Advanced Calculator" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Moiteek/Advanced-Calculator" class="action-btn primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="action-btn secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-category">
+                            <span class="category-badge">Utility Tool</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Advanced Calculator</h3>
+                        <p class="project-description">
+                            Sophisticated calculator with scientific functions, unit conversions, calculation history, and beautiful modern interface.
+                        </p>
+                        <div class="project-tech">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-sass"></i>
+                                <span>SCSS</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-calculator"></i>
+                                <span>50+ Functions</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-history"></i>
+                                <span>History</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Platform -->
+                <div class="project-card premium-3d" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-visual">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/e-commerce.png" alt="E-commerce Platform" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Moiteek/E-commerce-Platform" class="action-btn primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="action-btn secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-category">
+                            <span class="category-badge">E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            Full-featured online shopping platform with product catalog, shopping cart, payment integration, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <div class="tech-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-database"></i>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Full Cart</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Have a project in mind? Let's build something amazing together</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-card glowing">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>moiteekdigitaltech@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+234 703 160 5516</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Potiskum, Yobe State, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/Moiteek" class="social-link" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/mohammed-mohammed-mamman" class="social-link" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com/RealMoiteek" class="social-link" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://medium.com/@moiteek" class="social-link" target="_blank" aria-label="Medium">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left" data-aos-delay="200">
+                    <div class="contact-form-card glowing">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xdawoejd" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                                <label for="name">Name</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                <label for="email">Email</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" required placeholder="Project inquiry">
+                                <label for="subject">Subject</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn magnetic-btn">
+                                <span class="btn-content">
+                                    <span class="btn-text">Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </span>
+                                <div class="btn-glow"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="brand-text">Moiteek Digital Tech</span>
+                        <div class="brand-dot"></div>
+                    </div>
+                    <p class="footer-description">
+                        Transforming ideas into exceptional digital experiences. 
+                        Building scalable web applications with modern technologies and AI-powered solutions.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Moiteek" class="social-link" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/mohammed-mohammed-mamman" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/RealMoiteek" class="social-link" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://medium.com/@moiteek" class="social-link" target="_blank" aria-label="Medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#contact">Web Development</a></li>
+                            <li><a href="#contact">Mobile Apps</a></li>
+                            <li><a href="#contact">UI/UX Design</a></li>
+                            <li><a href="#contact">API Development</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="assets/mohammed Mohammed mamman.pdf cv.pdf" download>Download CV</a></li>
+                            <li><a href="https://github.com/Moiteek" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/mohammed-mohammed-mamman" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://medium.com/@moiteek" target="_blank">Medium</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Moiteek Digital Tech. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splinetool/runtime@0.9.110/runtime/build/runtime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
